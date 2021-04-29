@@ -1,59 +1,21 @@
-// Тема замыкание
-/*
-function makeCounter(){
-    let count = 0;
-    function counter (){
-        
-        return ++ count;
+const regex = /\b[a-z]+\b/g;
+const regex2 = new RegExp('[a-z]+','g');
+
+// task 1 Написать регулярку, которая выбирает строку, если в ней есть только цифры
+
+const regex3 = new RegExp('^[0-9]+$','g');
+
+// task 2 Написать функцию, которая проверяет правильность введенного имени пользователя
+
+const USERNAME_PATTERN = new RegExp('^{5,15}$');
+
+function checkUserName(username){
+    if(USERNAME_PATTERN.test(username)){
+        console.log("Success")
+    }else{
+        throw new Error("Invalid username");
     }
 }
-const counter1 = makeCounter();
-const counter2 = makeCounter();
-
-
-// task 1
-
-function createAdder(n) {
-    return function (m) {
-        return n +=m;
-    }
-};
-     const adder = createAdder(10);
-
-
-
-const btn = document.querySelector('#unique');
-
-function createBtnHandler(clicksAmount=5) {
-    const btnHandler = ({target: targetBtn}) =>{
-        if(clickAmount <= 0) {
-            targetBtn.removeEventListener("click, btnHandler");
-            return;
-        }
-        alert ('success');
-        clicksAmount --; 
-    };
-    return btnHandler;
-}
-
-btn.addEventListener('click', createBtnHandler(3));
-btn2.addEventListener('click', createBtnHandler(2));
-
-
-btn.addEventListener("click", (e)=>{
-    console.group();
-    console.log(e);
-    console.log(e.target === btn);
-    console.log(e.currentTarget);
-    console.groupEnd();
-});
-btn.addEventListener("click", btnHandler);
-
-window.addEventListener("click", btnHandler);
-document.addEventListener("click", btnHandler);
-document.body.addEventListener("click", btnHandler);
-*/
-
 
 
 
