@@ -23,6 +23,7 @@ function count(){
     }
    }, 500)
 }
+count();
 
          
 
