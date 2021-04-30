@@ -1,25 +1,28 @@
-const regex = /\b[a-z]+\b/g;
-const regex2 = new RegExp('[a-z]+','g');
+/*
+const btn = document.getElementById('btn');
 
-// task 1 Написать регулярку, которая выбирает строку, если в ней есть только цифры
+btn.addEventListener('click', (e)=>{
+    while(true){}
+});
 
-const regex3 = new RegExp('^[0-9]+$','g');
-
-// task 2 Написать функцию, которая проверяет правильность введенного имени пользователя
-
-const USERNAME_PATTERN = new RegExp('^{5,15}$');
-
-function checkUserName(username){
-    if(USERNAME_PATTERN.test(username)){
-        console.log("Success")
-    }else{
-        throw new Error("Invalid username");
-    }
+function sum(){
+    return 2 + 2;
 }
+setTimeout(()=>alert(),2000);
+console.log(sum());
+clearTimeout()
+*/
+// с помощью setInterval написать ф-ю, которая будет выводить раз в секунду числа от 1 до 20
 
-
-
-
+function count(){
+    let counter = 0;
+   const id = setInterval(()=>{
+    console.log(++counter);
+    if(counter >=20){
+        clearInterval(id);
+    }
+   }, 500)
+}
 
          
 
